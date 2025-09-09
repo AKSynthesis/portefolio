@@ -1,9 +1,9 @@
-import Navbar from "./components/Navbar.jsx"
-import Hero from "./components/Hero.jsx"
-import Technologies from "./components/Technologies.jsx"
-import Experiences from "./components/Experiences.jsx"
-import Projects from "./components/Projects.jsx"
-import Contact from "./components/Contact.jsx"
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
+import Technologies from "./components/Technologies.jsx";
+import Experiences from "./components/Experiences.jsx";
+import Projects from "./components/Projects.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
 
@@ -17,11 +17,11 @@ function App() {
         <Hero />
         <Technologies />
         <Projects />
-        <Experiences />
+        {/* <Experiences /> */}
         <Contact />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

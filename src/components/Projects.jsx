@@ -38,7 +38,17 @@ function Projects() {
                             transition={{ duration: 1 }}
                             className="w-full max-w-xl lg:w-3/4"
                         >
-                            <h3 className="mb-2 font semi-bold text-2xl">{project.title}</h3>
+                            <div className="flex items-center">
+                                <h3 className="mb-2 font semi-bold text-2xl px-2">{project.title}</h3> |
+                                <a href={project?.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="eshop"
+                                    className="mr-2 rounded bg-white px-2 py1 mx-3 text-sm font-medium text-black hover:bg-gray-400"
+                                >
+                                    Live Demo Here
+                                </a>
+                            </div>
                             <p className="mb-4 text-stone-400">{project.description}</p>
                             <p>
                                 {project.technologies.map((tech, index) => (

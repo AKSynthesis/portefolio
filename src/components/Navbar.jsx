@@ -1,5 +1,5 @@
-import { FaGithub } from "react-icons/fa"
-import logo from "../assets/raviKumarLogo.webp"
+import { FaGithub } from "react-icons/fa";
+import logo from "../assets/raviKumarLogo.webp";
 
 function Navbar() {
     return (

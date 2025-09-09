@@ -1,10 +1,12 @@
-import { RiReactjsLine } from "react-icons/ri"
-import { TbBrandNextjs } from "react-icons/tb"
-import { SiMongodb } from "react-icons/si"
-import { DiRedis } from "react-icons/di"
-import { FaNodeJs } from "react-icons/fa"
-import { BiLogoPostgresql } from "react-icons/bi"
+import { RiReactjsLine } from "react-icons/ri";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiMongodb } from "react-icons/si";
+// import { DiRedis } from "react-icons/di"
+import { SiSocketdotio } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { motion } from "framer-motion";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 const iconVariants = (duration) => ({
     initial: { y: -10 },
@@ -17,7 +19,7 @@ const iconVariants = (duration) => ({
             repeatType: "reverse",
         }
     }
-})
+});
 
 function Technologies() {
     return (
@@ -58,6 +60,14 @@ function Technologies() {
                     variants={iconVariants(2.5)}
                     className="p-4"
                 >
+                    <RiTailwindCssFill className="text-7xl text-sky-400 transform hover:scale-110 transition duration-300" />
+                </motion.div >
+                <motion.div
+                    initial="initial"
+                    animate="animate"
+                    variants={iconVariants(2.5)}
+                    className="p-4"
+                >
                     <SiMongodb className="text-7xl text-green-500 transform hover:scale-110 transition duration-300" />
                 </motion.div>
                 <motion.div
@@ -66,7 +76,7 @@ function Technologies() {
                     variants={iconVariants(2.5)}
                     className="p-4"
                 >
-                    <DiRedis className="text-7xl text-red-700 transform hover:scale-110 transition duration-300" />
+                    <SiSocketdotio className="text-7xl text-white transform hover:scale-110 transition duration-300" />
                 </motion.div>
                 <motion.div
                     initial="initial"

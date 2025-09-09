@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import profilePic from "../assets/raviKumarProfile.webp"
-import { HERO_CONTENT } from "../constants"
+import profilePic from "../assets/raviKumarProfile.webp";
+import { HERO_CONTENT } from "../constants";
 
 const containerVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -12,7 +12,7 @@ const containerVariants = {
             staggerChildren: 0.5,
         }
     }
-}
+};
 
 const ChildVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -21,16 +21,17 @@ const ChildVariants = {
         x: 0,
         transition: { duration: 0.5, }
     }
-}
+};
 
 function Hero() {
     return (
         <div className="pb-4 lg:mb-36">
             {/* Flex container for image + content */}
-            <div className="flex flex-wrap lg:flex-row-reverse items-center">
+            {/* <div className="flex flex-wrap lg:flex-row-reverse items-center"> */}
+            <div className="flex justify-center">
 
                 {/* Profile Image */}
-                <div className="w-full lg:w-1/2">
+                {/* <div className="w-full lg:w-1/2">
                     <div className="flex justify-center lg:p-8">
                         <motion.img
                             src={profilePic}
@@ -43,7 +44,7 @@ function Hero() {
                             transition={{ duration: 1, delay: 1.5 }}
                         />
                     </div>
-                </div>
+                </div> */}
 
                 {/* Text Content */}
                 <div className="w-full lg:w-1/2">
@@ -51,7 +52,8 @@ function Hero() {
                         initial="hidden"
                         animate="visible"
                         variants={containerVariants}
-                        className="flex flex-col items-center lg:items-start mt-10 lg:mt-0"
+                        className="flex flex-col items-center mt-10 lg:mt-0"
+                    //className="flex flex-col items-center lg:items-start mt-10 lg:mt-0"
                     >
                         <motion.h2
                             variants={ChildVariants}
