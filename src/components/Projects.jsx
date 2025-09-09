@@ -39,15 +39,21 @@ function Projects() {
                             className="w-full max-w-xl lg:w-3/4"
                         >
                             <div className="flex items-center">
-                                <h3 className="mb-2 font semi-bold text-2xl px-2">{project.title}</h3> |
-                                <a href={project?.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="eshop"
-                                    className="mr-2 rounded bg-white px-2 py1 mx-3 text-sm font-medium text-black hover:bg-gray-400"
-                                >
-                                    Live Demo Here
-                                </a>
+                                <h3 className="mb-2 font-semibold text-2xl ">{project.title}</h3>
+                                {project.link && (
+                                    <>
+                                        <span className="mx-2">|</span>
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`${project.title} live demo`}
+                                            className="rounded bg-white px-2 p-1 text-sm font-medium text-black hover:bg-gray-400"
+                                        >
+                                            Live Demo Here
+                                        </a>
+                                    </>
+                                )}
                             </div>
                             <p className="mb-4 text-stone-400">{project.description}</p>
                             <p>

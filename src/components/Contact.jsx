@@ -60,7 +60,7 @@ function Contact() {
     };
 
     return (
-        <div className="border-t border-stone-900 pb-20">
+        <div className="border-t border-white/20 pb-20">
             <motion.h2
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
@@ -73,7 +73,12 @@ function Contact() {
             <div className="h-full">
                 <div className="h-full flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-12 px-4 sm:px-8 lg:px-20 py-8">
                     {/* TEXT CONTAINER */}
-                    <div className='h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl'>
+                    <motion.div
+                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, x: -100 }}
+                        transition={{ duration: 1 }}
+                        className='h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl'
+                    >
                         <div>
                             {text.split("").map((letter, index) => (
                                 <motion.span
@@ -90,9 +95,12 @@ function Contact() {
                             ))}
                             😉
                         </div>
-                    </div >
+                    </motion.div >
                     {/* FORM CONTAINER */}
-                    <form
+                    <motion.form
+                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        transition={{ duration: 1 }}
                         onSubmit={sendEmail}
                         ref={form}
                         className="h-1/2 lg:h-full lg:w-1/2 bg-white/10 backdrop-blur-md rounded-xl flex flex-col gap-6 
@@ -123,7 +131,7 @@ function Contact() {
 
                         {success && <span className="text-green-600 font-semibold">Your message has been sent successfully</span>}
                         {error && <span className="text-red-600 font-semibold">{error}</span>}
-                    </form>
+                    </motion.form>
                 </div >
             </div >
         </div>
